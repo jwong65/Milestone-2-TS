@@ -13,13 +13,12 @@ export default function AddEvent() {
   const [theme] = useState(localStorage.getItem('theme'))
   const [formData, setFormData] = useState({
     start: '',
-    start: '',
     end: '',
     title: '',
     description: '',
     color: '',
   })
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: { preventDefault: () => void; }) => {
     event.preventDefault()
 
     const newFormDocument = {

@@ -16,13 +16,13 @@ export default function ContactUs() {
     note: '',
   })
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: { preventDefault: () => void; }) => {
     event.preventDefault()
 
     const newContactDocument = {
       name: contactData.name,
       email: contactData.email,
-      number: contactData.number,
+      number: contactData.phoneNumber,
       note: contactData.note
     }
 
@@ -49,13 +49,13 @@ export default function ContactUs() {
       <br/>
       <label>
         Email:
-        <input type="email" value={contactData.startTime} onChange={(e) => setContactData({ ...contactData, email: e.target.value})} />
+        <input type="email" value={contactData.email} onChange={(e) => setContactData({ ...contactData, email: e.target.value})} />
       </label>
       <br/>
       <label>
         Phone Number:
         <input type="tel" id="phone" name="phone"
-       required value={contactData.number} onChange={(e) => setContactData({ ...contactData, number: e.target.value})} />
+       required value={contactData.phoneNumber} onChange={(e) => setContactData({ ...contactData, phoneNumber: e.target.value})} />
       </label>
       <br/>
       <label>
