@@ -2,10 +2,11 @@ import NavBar from '../components/NavBar'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import React from 'react';
 
 export default function DeleteEvent() {
-  const [myOptions, setMyOptions] = useState([]);
-  const [selectedOption, setSelectedOption] = useState('');
+  const [myOptions, setMyOptions] = React.useState([]);
+  const [selectedOption, setSelectedOption] = React.useState('');
 
   const [theme, setTheme] = useState(localStorage.getItem('theme'))
 
