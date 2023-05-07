@@ -63,7 +63,7 @@ mongoose.connect(process.env.PROFILE_CONNECTION)
 .then(() => {
     console.log('data base connection successful')
 })
-.catch((err) => {
+.catch((err: any) => {
     console.log(err)
 })
 mongoose.set('strictQuery', false);
