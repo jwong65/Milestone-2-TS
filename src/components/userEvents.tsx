@@ -1,3 +1,6 @@
+import React from "react";
+import { useState } from "react";
+
 let userEvents;
 // const defaultEvents = [{
 //     id: 1,
@@ -55,7 +58,7 @@ let userEvents;
   
 
 
-    const loadPopupForm = React.useCallback((event) => {
+    const loadPopupForm = React.useCallback((event: { title: any; description: any; start: any; end: any; allDay: any; status: any; color: any; }) => {
         setTitle(event.title);
         setDescription(event.description);
         setDate([event.start, event.end]);
@@ -63,3 +66,32 @@ let userEvents;
         setStatus(event.status || 'busy');
         setSelectedColor(event.color || '');
     }, []);
+
+function setTitle(title: any) {
+    throw new Error("Function not implemented.");
+}
+
+
+function setDescription(description: any) {
+    throw new Error("Function not implemented.");
+}
+
+
+function setDate(arg0: any[]) {
+    throw new Error("Function not implemented.");
+}
+
+
+function setAllDay(arg0: any) {
+    throw new Error("Function not implemented.");
+}
+
+
+function setStatus(arg0: any) {
+    throw new Error("Function not implemented.");
+}
+
+
+function setSelectedColor(arg0: any) {
+    throw new Error("Function not implemented.");
+}

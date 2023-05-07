@@ -1,4 +1,5 @@
 import { Eventcalendar, getJson, toast } from '@mobiscroll/react';
+import React from 'react';
 
 function App() {
     const [myEvents, setEvents] = React.useState([]);
@@ -9,7 +10,7 @@ function App() {
         }, 'jsonp');
     }, []);
     
-    const onEventClick = React.useCallback((event) => {
+    const onEventClick = React.useCallback((event: { event: { title: any; }; }) => {
         toast({
             message: event.event.title
         });
