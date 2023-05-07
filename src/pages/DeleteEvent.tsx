@@ -25,7 +25,7 @@ export default function DeleteEvent() {
   async function handleDelete() {
     try {
       await axios.delete(`http://localhost:5000/TODO/v1/form/:${selectedOption._id}`); 
-      setMyOptions(myOptions.filter(obj => obj._id !== selectedOption._id));
+      setMyOptions(myOptions.filter((obj:any) => obj._id !== selectedOption._id));
       setSelectedOption('');
     } catch (error) {
       console.error(error);
@@ -40,7 +40,7 @@ export default function DeleteEvent() {
               <form>
                 <div>
                   <select>
-                    {myOptions.map(obj => (
+                    {myOptions.map((obj:any) => (
                       <option key={obj._id} value={obj.title}>{obj.title}</option>
                     ))}
                   </select>
