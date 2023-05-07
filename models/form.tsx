@@ -33,7 +33,7 @@ const formSchema = new mongoose.Schema({
     }
 })
 
-formSchema.virtual('id').get(function () {
+formSchema.virtual('id').get( function(this:any){
     return this._id.toHexString();
 });
 
