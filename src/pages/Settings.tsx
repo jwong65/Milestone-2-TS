@@ -6,7 +6,12 @@ import {Button} from '@mui/material'
 
 export default function Settings() {
   // const [theme, setTheme]  =useState(localStorage.getItem('theme') || 'light')
-  const [theme, setTheme] = useState(localStorage.getItem('theme'))
+  
+  let temptheme:string|null = localStorage.getItem('theme')
+  if (temptheme == null){
+    temptheme = ''
+  }
+  const [theme, setTheme] = useState<string>(temptheme)
   const toggleTheme = ()=>{
     if (theme === 'light'){
       setTheme('dark')
